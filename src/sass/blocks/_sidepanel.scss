@@ -23,4 +23,11 @@
             width: 150px;
         }
     }
+    &__link {
+        svg path {
+            &:hover {
+                fill: $main-color;
+            }
+        }
+    }
 }
