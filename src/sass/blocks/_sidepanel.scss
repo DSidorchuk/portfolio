@@ -30,4 +30,15 @@
             }
         }
     }
+    &_dark {
+        color: black;
+        .sidepanel__divider {
+            background-color: black;
+        }
+        .sidepanel__link {
+            svg path {
+                fill: black;
+            }
+        }
+    }
 }
