@@ -1,4 +1,5 @@
 addEventListener('DOMContentLoaded', () => {
+    // Closing sidepanel 
     const hamburger = document.querySelector('.hamburger'),
           menu = document.querySelector('.menu'),
           closeElem = document.querySelector('.menu__close'),
@@ -17,4 +18,13 @@ addEventListener('DOMContentLoaded', () => {
             sidePanel.classList.remove('sidepanel_dark');
         }
     });
+
+    // State width of filled bar in rates
+    const rate = document.querySelectorAll('.skills__rate-size'),
+          filledBar = document.querySelectorAll('.skills__rate-bar_filled');
+
+    rate.forEach((elem, i) => {
+        filledBar[i].style.width = elem.textContent;
+    });
+
 });
