@@ -1,0 +1,90 @@
+.skills {
+    margin-top: 120px;
+    &__title {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        margin: 0 auto;
+        margin-top: 6px;
+        text-align: center;
+    }
+    &__wrapper {
+        display: grid;
+        margin-top: 60px;
+        padding: 0 10px;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 270px);
+        grid-auto-rows: repeat(2, 270px);
+        gap: 13px;
+    }
+    &__item {
+        padding: 30px 30px 25px 30px;
+        border: 1px solid #000000;
+        &-icon {
+            display: flex;
+            align-content: center;
+            min-height: 65px;
+            img {
+                display: block;
+            }
+        }
+        &-title {
+            display: block;
+            margin-top: 20px;
+        }
+        &-text {
+            margin-top: 15px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+    }
+
+    &__diagramm {
+        display: grid;
+        margin-top: 120px;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        gap: 30px 45px;
+    }
+    &__rate {
+        &-head {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-title {
+            position: relative;
+            padding-left: 13px;
+            @include before_circle;
+            &:before {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &-size {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+        }
+        &-bar {
+            margin-top: 25px;
+            width: 350px;
+            height: 14px;
+            background-color: #E8E4DE;
+            border-radius: 4px;
+            &_filled {
+                background-color: $main-color;
+            }
+        }
+    }
+}
