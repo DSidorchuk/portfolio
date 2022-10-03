@@ -10,21 +10,24 @@
     }
     &__item {
         display: grid;
-        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        grid-template: repeat(2, minmax(21px, auto)) / repeat(2, auto);
+        padding-left: 25px;
+        row-gap: 5px;
         &-title {
             position: relative;
-            grid-column: 1 / 3;
-            @include before_circle;
             &:before {
+                content: '';
+                position: absolute;
+                left: -25px;
+                top: 5px;
                 width: 15px;
                 height: 15px;
-                left: -25px;
-                top: 50%;
-                transform: translateY(-50%);
+                border-radius: 100%;
+                background-color: $main-color;
+
             }
         }
         span {
-            grid-column: 3 / 4;
             justify-self: end;
             font-weight: 700;
             font-size: 14px;
@@ -32,8 +35,7 @@
             color: #000000;
         }
         &-text {
-            grid-row: 2 / 3;
-            grid-column: 1 / 4;
+            grid-column: 1 / 3;
             font-weight: 500;
             font-size: 12px;
             line-height: 18px;
