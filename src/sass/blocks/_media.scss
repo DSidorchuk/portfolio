@@ -21,7 +21,26 @@
                 column-gap: 15px;
             }
         }
-
+    }
+    .resume {
+        &__wrapper {
+            padding: 60px 20px 0 20px;
+            column-gap: 50px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(3, 270px);
+            grid-template-rows: repeat(3, 270px);
+            justify-content: center;
+        }
+        &__diagramm {
+            margin-top: 100px;
+            grid-template-columns: repeat(2, 350px);
+            grid-template-rows: repeat(3, 70px);
+            gap: 50px 45px;
+            justify-content: space-around;
+        }
     }
 }
 
@@ -48,7 +67,27 @@
             }
         }
     }
-
+    .resume {
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 40px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(2, 270px);
+            grid-template-rows: repeat(4, 270px);
+            justify-content: center;
+        }
+        &__diagramm {
+            grid-template-columns: repeat(2, 300px);
+        }
+        &__rate {
+            &-bar {
+                width: 300px;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -79,6 +118,30 @@
             &-item {
                 grid-template-columns: 40px 200px;
                 column-gap: 20px;
+            }
+        }
+    }
+    .resume {
+        &__item {
+            &-location {
+                min-height: 36px;
+            }
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(2, 270px);
+            grid-template-rows: repeat(4, 270px);
+            justify-content: center;
+        }
+        &__diagramm {
+            grid-template-columns: repeat(1, 300px);
+            grid-template-rows: repeat(6, 70px);
+            row-gap: 40px;
+        }
+        &__rate {
+            &-bar {
+                width: 300px;
             }
         }
     }
@@ -118,6 +181,27 @@
         }
         &__skills {
             grid-template-columns: 1fr;
+        }
+    }
+    .resume {
+        padding-top: 40px;
+        .divider {
+            margin-top: 15px;
+        }
+        &__wrapper {
+            padding-top: 40px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            row-gap: 40px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(1, 270px);
+            grid-template-rows: repeat(7, 270px);
+        }
+        &__diagramm {
+            margin-top: 40px;
         }
     }
 }
